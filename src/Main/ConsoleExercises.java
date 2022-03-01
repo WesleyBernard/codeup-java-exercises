@@ -20,8 +20,10 @@ public class ConsoleExercises {
         System.out.println("Please enter the length and width of your classroom seperated by a space. Round to the nearest whole number");
         int length = input.nextInt();
         int width = input.nextInt();
+        int area = length * width;
 
         int perimeter = (length * 2) + (width * 2);
+        System.out.printf("The area of your classroom is: %d%n", area);
 
         System.out.printf("the perimeter of your classroom is: %d", perimeter);
 

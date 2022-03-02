@@ -20,7 +20,7 @@ public class ControlFlowExercises {
 //    do {
 //        System.out.println(i);
 //        i -= 5;
-//    }while (i >= 10);
+//    }while (i >= -10);
 
 //        long i = 2;
 //        do{

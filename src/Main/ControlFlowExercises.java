@@ -76,7 +76,7 @@ public class ControlFlowExercises {
                 theGrade = "C";
             } else if (grade >= 80 && grade <= 87) {
                 theGrade = "B";
-            } else if (grade >= 88 && grade <= 100) {
+            } else if (grade >= 88) {
                 theGrade = "A";
             }
             System.out.printf("Your grade is " + theGrade +"\n");

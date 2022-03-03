@@ -68,14 +68,31 @@ public class MethodsExercises {
 
         }
 
-        public static void diceRoller(){
-            System.out.print("Good day to you, let's roll some dice. How many sides would you like on these dice? Let's keep it between 2 and 20, for now. ");
-            int sides = myRange(2,20);
-            System.out.printf("%d sides, huh? Very well then, let's begin \n",sides);
+        public static void roll(int sides){
             for (int i = 1; i <= 2; i++) {
                 System.out.printf("Dice number %s: ",i);
                 System.out.println((int)((Math.random()* sides) + 1));
             }
+        }
+
+        public static void rollValidation(){
+            System.out.print("Type \"Roll\" to roll the dice. ");
+            String letsRoll = input.next();
+            input.nextLine();
+            if(!(letsRoll.equalsIgnoreCase("roll"))){
+                System.out.println("I do believe I said to type \"Roll\"....It's not even case sensitive");
+                rollValidation();
+            }
+        }
+
+        public static void diceRoller(){
+//            System.out.print("Good day to you, let's roll some dice. How many sides would you like on these dice? Let's keep it between 2 and 20, for now. ");
+//            int sides = myRange(2,20);
+            System.out.print("Let's roll some dice. How many sides would you like on these dice? ");
+            int sides = input.nextInt();
+            System.out.printf("%d sides, huh? Very well then, let's begin \n",sides);
+            rollValidation();
+            roll(sides);
             System.out.print("Would you like to keep playing? [y/n] ");
             String replay = input.next();
             if(replay.equals("y")){

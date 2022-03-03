@@ -65,7 +65,7 @@ public class ControlFlowExercises {
         String again = "n";
         do {
 
-            System.out.printf("Please insert a grade between 0-100 ");
+            System.out.print("Please insert a grade between 0-100 ");
             int grade = input.nextInt();
             String theGrade = "the grade";
             if (grade <= 59) {
@@ -79,8 +79,7 @@ public class ControlFlowExercises {
             } else if (grade >= 88) {
                 theGrade = "A";
             }
-            System.out.printf("Your grade is " + theGrade +"\n");
-            System.out.printf("Would you like to insert another grade? y/n ");
+            System.out.print("Your grade is " + theGrade +"\nWould you like to insert another grade? y/n ");
             again = input.next();
         }while (again.equals("y"));
 

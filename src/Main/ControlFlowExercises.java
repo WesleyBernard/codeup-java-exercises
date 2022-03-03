@@ -68,7 +68,7 @@ public class ControlFlowExercises {
             System.out.printf("Please insert a grade between 0-100 ");
             int grade = input.nextInt();
             String theGrade = "the grade";
-            if (grade >= 0 && grade <= 59) {
+            if (grade <= 59) {
                 theGrade = "F";
             } else if (grade >= 60 && grade <= 66) {
                 theGrade = "D";

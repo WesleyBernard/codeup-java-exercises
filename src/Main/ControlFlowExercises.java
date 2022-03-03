@@ -54,7 +54,7 @@ public class ControlFlowExercises {
             if (userInput > 0) {
                 System.out.println("Number \t|Squared\t|Cubed\t");
                 for (long i = 1; i <= userInput; i++) {
-                    System.out.printf(i + "\t\t|" + i * i + "\t\t\t|" + i * i * i + "\n");
+                    System.out.printf("%-6d" + "\t|" + "%-7d" + "\t|" + "%-5d" + "\n", i, i*i, i*i*i);
 
                 }
                 System.out.print("Would you like to continue? (y/n) ");

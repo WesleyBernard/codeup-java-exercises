@@ -7,5 +7,7 @@ public class InputTest {
         uwu.getBoolean();
         uwu.getInt(10, 100);
         uwu.getDouble();
+        uwu.close();
+        uwu.getDouble();
     }
 }

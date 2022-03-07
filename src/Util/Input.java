@@ -67,4 +67,7 @@ public class Input {
         System.out.println("I'll hold onto that for ya");
         return userInput;
     }
+    public void close(){
+        this.scanner.close();
+    }
 }

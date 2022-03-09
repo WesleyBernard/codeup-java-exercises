@@ -5,6 +5,14 @@ public class Roommate {
     private int age;
     private String occupation;
 
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
+
     public Roommate(String name, int age, String occupation) {
         this.name = name;
         this.age = age;
@@ -14,9 +22,10 @@ public class Roommate {
         System.out.printf("%s says hello! \n", this.name);
     }
     public void work(){
-        System.out.printf("%s has is busy preforming the responsibilities of a %s \n",this.name, this.occupation);
+        System.out.printf("%s is busy preforming the responsibilities of a %s \n",this.name, this.occupation);
     }
     public void age(){
         System.out.printf("%s is %s years old\n",this.name, this.age);
     }
+
 }

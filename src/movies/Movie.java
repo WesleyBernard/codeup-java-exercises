@@ -33,14 +33,13 @@ public class Movie {
         return newArray;
     }
     public static Movie[]showCategory(Movie[] movieArray, String category){
-        Movie[] categoryArray;
         int index = 0;
         for (int i = 0; i < movieArray.length; i++) {
             if (movieArray[i].category.equalsIgnoreCase(category)){
                 index++;
             }
         }
-        categoryArray = new Movie[index];
+        Movie[]categoryArray = new Movie[index];
         index = 0;
         for (Movie movie : movieArray){
             if (movie.category.equalsIgnoreCase(category)){

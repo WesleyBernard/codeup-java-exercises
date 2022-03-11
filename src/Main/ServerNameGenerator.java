@@ -13,7 +13,7 @@ public class ServerNameGenerator {
     }
     public static String randomIndex(String[] starray){
         Random random = new Random();
-        int index = random.nextInt(10);
+        int index = random.nextInt(starray.length)-1;
         System.out.println(index);
         return starray[index];
     }

@@ -12,6 +12,7 @@ public class Input {
     }
     public Input(String name){
         this.name = name;
+        this.scanner = new Scanner(System.in);
     }
     public void setName(String name){
         this.name = name;
@@ -23,7 +24,7 @@ public class Input {
         return this.scanner.nextLine();
     }
     public String getString(String prompt){
-        System.out.println(prompt);
+        System.out.print(prompt + "\n");
         return this.scanner.nextLine();
     }
     public Boolean getBoolean(){
@@ -63,11 +64,15 @@ public class Input {
         return UserInput;
     }
     public int getInt(){
-        return this.scanner.nextInt();
+        int input = this.scanner.nextInt();
+        this.scanner.nextLine();
+        return input;
     }
     public int getInt(String prompt){
         System.out.printf("%s ", prompt);
-        return this.scanner.nextInt();
+        int input = this.scanner.nextInt();
+        this.scanner.nextLine();
+        return input;
     }
     public double getDouble(double min, double max){
         double UserInput;

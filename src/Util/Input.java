@@ -29,6 +29,7 @@ public class Input {
     }
     public Boolean getBoolean(){
         String UserInput = this.scanner.next();
+        this.scanner.nextLine();
         if(UserInput.equalsIgnoreCase("y")||UserInput.equalsIgnoreCase("yes")){
             System.out.println("So true, besty");
             return true;
@@ -39,6 +40,7 @@ public class Input {
     public Boolean getBoolean(String prompt){
         System.out.printf("%s %n", prompt);
         String UserInput = this.scanner.next();
+        this.scanner.nextLine();
         if(UserInput.equalsIgnoreCase("y")||UserInput.equalsIgnoreCase("yes")){
             System.out.println("So true, besty");
             return true;
@@ -92,11 +94,15 @@ public class Input {
         return UserInput;
     }
     public double getDouble(){
-        return this.scanner.nextDouble();
+        double input =this.scanner.nextDouble();
+        this.scanner.nextLine();
+        return input;
     }
     public double getDouble(String prompt){
         System.out.print(prompt + " ");
-        return this.scanner.nextDouble();
+        double input =this.scanner.nextDouble();
+        this.scanner.nextLine();
+        return input;
     }
     public void close(){
         this.scanner.close();

@@ -37,8 +37,9 @@ public class GradesApplication {
             String repeat = input.getString("Would you like to look at another student? [y/n]");
             if (repeat.equals("n")){
                 again = false;
+                System.out.println("goodbye");
             }
-        } while (true);
+        } while (again);
 
     }
     public static void displayStudentInfo(HashMap<String, Student> studentMap, String key){

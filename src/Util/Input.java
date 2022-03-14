@@ -41,12 +41,7 @@ public class Input {
         System.out.printf("%s %n", prompt);
         String UserInput = this.scanner.next();
         this.scanner.nextLine();
-        if(UserInput.equalsIgnoreCase("y")||UserInput.equalsIgnoreCase("yes")){
-            System.out.println("So true, besty");
-            return true;
-        }
-        System.out.println("Couldn't be more false");
-        return false;
+        return UserInput.equalsIgnoreCase("y") || UserInput.equalsIgnoreCase("yes");
     }
     public int getInt(int min, int max){
         int UserInput;

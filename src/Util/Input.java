@@ -30,15 +30,10 @@ public class Input {
     public Boolean getBoolean(){
         String UserInput = this.scanner.next();
         this.scanner.nextLine();
-        if(UserInput.equalsIgnoreCase("y")||UserInput.equalsIgnoreCase("yes")){
-            System.out.println("So true, besty");
-            return true;
-        }
-        System.out.println("Couldn't be more false");
-        return false;
+        return UserInput.equalsIgnoreCase("y") || UserInput.equalsIgnoreCase("yes");
     }
     public Boolean getBoolean(String prompt){
-        System.out.printf("%s %n", prompt);
+        System.out.printf("%s ", prompt);
         String UserInput = this.scanner.next();
         this.scanner.nextLine();
         return UserInput.equalsIgnoreCase("y") || UserInput.equalsIgnoreCase("yes");

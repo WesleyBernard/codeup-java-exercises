@@ -28,8 +28,8 @@ public class GradesApplication {
         students.put("shouldReallyJustBeAnInstructor", raymond);
         students.put("ranchWater>Java", emilio);
         students.put("tooRich4Dis", irvin);
-        System.out.println("Hello! Here are the usernames of our students!");
-        System.out.println(students.keySet());
+        System.out.println("Hello! Here are the usernames of our students!\n");
+        System.out.println(students.keySet() + "\n");
         boolean again = true;
         do {
             String key = input.getString("Which student would you like to see more of? ");

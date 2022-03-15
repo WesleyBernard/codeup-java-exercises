@@ -48,51 +48,76 @@ public class Input {
     }
     public int getInt(int min, int max, String prompt){
         int UserInput;
-        do {
-            System.out.printf("%s ",prompt);
-            UserInput = this.scanner.nextInt();
-        } while (UserInput > max || UserInput < min);
-        this.scanner.nextLine();
-        return UserInput;
+        try {
+            do {
+                System.out.printf("%s ", prompt);
+                UserInput = Integer.parseInt(getString());
+            } while (UserInput > max || UserInput < min);
+            return UserInput;
+        }catch (NumberFormatException e){
+            System.out.println("That was not an integer, try again");
+            return getInt(min, max, prompt);
+        }
     }
     public int getInt(){
-        int input = this.scanner.nextInt();
-        this.scanner.nextLine();
-        return input;
+        try {
+            return Integer.parseInt(getString());
+        }catch (NumberFormatException e){
+            System.out.println("That was not an integer, try again");
+            return getInt();
+        }
     }
     public int getInt(String prompt){
         System.out.printf("%s ", prompt);
-        int input = this.scanner.nextInt();
-        this.scanner.nextLine();
-        return input;
+        try {
+            return Integer.parseInt(getString());
+        }catch (NumberFormatException e){
+            System.out.println("That was not an integer, try again");
+            return getInt(prompt);
+        }
+
     }
     public double getDouble(double min, double max){
-        double UserInput;
-        do {
-            UserInput = this.scanner.nextDouble();
-        } while (UserInput > max || UserInput < min);
-        this.scanner.nextLine();
-        return UserInput;
+        try {
+            double UserInput;
+            do {
+                UserInput = Double.parseDouble(getString());
+            } while (UserInput > max || UserInput < min);
+            return UserInput;
+        }catch (NumberFormatException e){
+            System.out.println("That was not a Double, try again");
+            return getDouble(min, max);
+        }
     }
     public double getDouble(double min, double max, String prompt){
-        double UserInput;
-        do {
-            System.out.print(prompt + " ");
-            UserInput = this.scanner.nextDouble();
-        } while (UserInput > max || UserInput < min);
-        this.scanner.nextLine();
-        return UserInput;
+        try {
+            double UserInput;
+            do {
+                System.out.print(prompt + " ");
+                UserInput = Double.parseDouble(getString());
+            } while (UserInput > max || UserInput < min);
+            return UserInput;
+        }catch (NumberFormatException e){
+            System.out.println("That was not a Double, try again");
+            return getDouble(min, max, prompt);
+        }
     }
     public double getDouble(){
-        double input =this.scanner.nextDouble();
-        this.scanner.nextLine();
-        return input;
+        try {
+            return Double.parseDouble(getString());
+        }catch (NumberFormatException e){
+            System.out.println("That was not a Double, try again");
+            return getDouble();
+        }
     }
     public double getDouble(String prompt){
-        System.out.print(prompt + " ");
-        double input =this.scanner.nextDouble();
-        this.scanner.nextLine();
-        return input;
+        try {
+            System.out.print(prompt + " ");
+            return Double.parseDouble(getString());
+        }catch (NumberFormatException e){
+            System.out.println("That was not a Double, try again");
+            return getDouble(prompt);
+        }
     }
     public void close(){
         this.scanner.close();

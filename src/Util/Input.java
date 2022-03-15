@@ -119,6 +119,12 @@ public class Input {
             return getDouble(prompt);
         }
     }
+    public int getBinary(String binaryString){
+        return Integer.valueOf(binaryString, 2);
+    }
+    public int getHex(String hexString){
+        return Integer.valueOf(hexString, 16);
+    }
     public void close(){
         this.scanner.close();
     }

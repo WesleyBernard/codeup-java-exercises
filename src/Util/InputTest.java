@@ -9,5 +9,10 @@ public class InputTest {
 //        uwu.getDouble("Please enter a double");
 //        uwu.close();
 //        uwu.getDouble();
+//        System.out.println(Integer.valueOf("10011", 2));
+        System.out.println(uwu.getBinary("10011"));
+        System.out.println(uwu.getHex("F"));
+//        System.out.println(Integer.valueOf("F",16));
+//        System.out.println(Integer.toBinaryString(78));
     }
 }

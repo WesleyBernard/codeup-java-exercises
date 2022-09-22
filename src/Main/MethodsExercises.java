@@ -1,5 +1,6 @@
 package Main;
 
+import java.util.Locale;
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -15,7 +16,10 @@ public class MethodsExercises {
 //
 //        factorials();
 
-        diceRoller();
+//        diceRoller();
+        String mystr =  shout("whatever I want");
+        System.out.println(mystr);
+
 
 
     }
@@ -100,6 +104,8 @@ public class MethodsExercises {
             }
         }
 
-
+        public static String shout(String str) {
+        return str.toUpperCase() + "!!!";
+        }
 
 }
